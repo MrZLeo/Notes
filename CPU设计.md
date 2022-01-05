@@ -8,7 +8,7 @@
 2. 数据通路：总线BUS、专用通路
 3. 外部交互：外部总线
 
-![image-20210615205010074](/Users/mrzleo/Library/Application Support/typora-user-images/image-20210615205010074.png)
+![image-20210615205010074](https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210615205010074.png)
 
 - 数据总线和CPU内部总线是**双向**的。
 - 总线的条数称为数据总线宽度。比如，**16**位总线，指其数据总线为**16**根。
@@ -24,7 +24,7 @@
 
 ## CPU指令执行
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617152655350.png" alt="image-20210617152655350" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617152655350.png" alt="image-20210617152655350" style="zoom:50%;" />
 
 > 取指 —> 译码 —> 执行 —> 写回
 
@@ -76,7 +76,7 @@ Write
   3. 时钟周期（节拍周期）：完成一个微操作所用的时间
   4. [时钟脉冲、节拍脉冲]：微操作过程中的最小动作单位
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617154123424.png" alt="image-20210617154123424" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617154123424.png" alt="image-20210617154123424" style="zoom:50%;" />
 
 - 时序控制的方式：
   - 同步：每个控制信号都由事先确定的统一的时序信号进行统一控制
@@ -91,7 +91,7 @@ Write
 
 利用组合逻辑电路，将对应的输入转化成对应的输出（枚举发生条件，将其描述为与或门逻辑）
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617160412085.png" alt="image-20210617160412085" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617160412085.png" alt="image-20210617160412085" style="zoom:50%;" />
 
 > ( 时间信息、指令信息、状态信息 ) —> 控制信号
 
@@ -103,29 +103,29 @@ Write
 >
 > 微程序控制器：根据外部输入的信号，调用内部由微指令组成的微程序，输出微命令，完成一系列微操作。
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617165639877.png" alt="image-20210617165639877" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617165639877.png" alt="image-20210617165639877" style="zoom:50%;" />
 
 - 一条(机器)指令对应一个微程序，该微程序包含从取指令到执行指令一个完整微操作序列对应的全部微指令，它被存入一个称为控制存储器(**control memory**)的**ROM**中。
 
 - **CM**中存放着指令系统中定义的所有指令的微程序。
 - 微指令周期：一条微指令执行的时间(包括从控制存储器中取得微指令和执行微指令所用时间)
-- <img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617170708743.png" alt="image-20210617170708743" style="zoom:50%;" />
+- <img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617170708743.png" alt="image-20210617170708743" style="zoom:50%;" />
 
 #### 微指令寻址
 
 1. 两地址格式
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617171919571.png" alt="image-20210617171919571" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617171919571.png" alt="image-20210617171919571" style="zoom:50%;" />
 
 2. 单地址格式
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617171951823.png" alt="image-20210617171951823" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617171951823.png" alt="image-20210617171951823" style="zoom:50%;" />
 
 3. 可变格式
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617172045998.png" alt="image-20210617172045998" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617172045998.png" alt="image-20210617172045998" style="zoom:50%;" />
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617172117254.png" alt="image-20210617172117254" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617172117254.png" alt="image-20210617172117254" style="zoom:50%;" />
 
 #### 控制信号编码
 
@@ -139,7 +139,7 @@ Write
 - 可以在同一个时间有效的控制信号称为相容信号，具有相容性
 - 不能在同一个时间有效的控制信号称为互斥信号，具有互斥性
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617172354247.png" alt="image-20210617172354247" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617172354247.png" alt="image-20210617172354247" style="zoom:50%;" />
 
 ##### 字段译码法(字段编码) 
 
@@ -153,11 +153,11 @@ Write
 
 - 每个字段中要设计一个**无效控制信号**的编码
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617172915970.png" alt="image-20210617172915970" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617172915970.png" alt="image-20210617172915970" style="zoom: 33%;" />
 
-<img src="/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617172934546.png" alt="image-20210617172934546" style="zoom: 40%;" />
+<img src="https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617172934546.png" alt="image-20210617172934546" style="zoom: 40%;" />
 
-![image-20210617173202291](/Users/mrzleo/Library/Application Support/typora-user-images/image-20210617173202291.png)
+![image-20210617173202291](https://raw.githubusercontent.com/MrZLeo/Image/main/uPic/2022/01/04/image-20210617173202291.png)
 
 ## CPU内部指令系统设计
 
